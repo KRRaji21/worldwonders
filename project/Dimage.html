@@ -1,0 +1,29 @@
+<head>
+<meta http-equiv="Compatiable" context="X-IE-10">
+<script type="text/javascript">
+function movelr()
+{
+if(document.getElementById("img 1").style.pixelLeft==500)
+clearTimeout(timer);
+if(document.getElementById("img 1").style.pixelLeft<=500)
+document.getElementById("img 1").style.pixelLeft+=5;
+timer=setTimeout("movelr()",50)
+}
+function moverl()
+{
+if(document.getElementById("img 1").style.pixelLeft==0)
+clearTimeout(timer);
+if(document.getElementById("img 1").style.pixelLeft>0)
+document.getElementById("img 1").style.pixelLeft-=5;
+timer=setTimeout("moverl()",50)
+}
+</script>
+</head>
+<body>
+<h2 align="center">Dynamicaly moving the image</h2>
+<img src="1.jpg" id="img 1" style="position:relative" width="200" height="150">
+<form>
+<input type="button" value="Move Left to Right" onClick="movelr()">
+<input type="button" value="Move Right to Left" onClick="moverl()">
+</form> 
+</body>
